@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  /* cucumber vscode config */
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.onTypeFormat": true,
+  "cucumberautocomplete.steps": ["e2e/steps/*.steps.ts"],
+  "cucumberautocomplete.syncfeatures": "e2e/features/*.feature",
+  "[feature]": {
+    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete",
+    "editor.formatOnSave": true
+  }
+}

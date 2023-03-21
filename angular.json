@@ -57,6 +57,14 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "e2e": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.e2e.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -69,6 +77,9 @@
             },
             "development": {
               "browserTarget": "cucumber-playwright-starter:build:development"
+            },
+            "e2e": {
+              "browserTarget": "cucumber-playwright-starter:build:e2e"
             }
           },
           "defaultConfiguration": "development"

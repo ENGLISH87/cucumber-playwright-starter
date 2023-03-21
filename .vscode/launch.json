@@ -3,18 +3,27 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
-      "type": "pwa-chrome",
+      "name": "E2E Tests",
+      "type": "node",
       "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/node_modules/@cucumber/cucumber/bin/cucumber-js",
+      "args": [
+        /* "--tags",
+        "@your-tags" */
+      ]
     },
     {
-      "name": "ng test",
-      "type": "chrome",
+      "name": "E2E Current Feature",
+      "type": "node",
       "request": "launch",
-      "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "console": "integratedTerminal",
+      "program": "${workspaceFolder}/node_modules/@cucumber/cucumber/bin/cucumber-js",
+      "args": [
+        "-p", // cucumberjs --profile
+        "debug", // use cucumberjs debug profile in cucumber.js config
+        "${relativeFile}" // run tests for current file (must be .feature)
+      ]
     }
   ]
 }
