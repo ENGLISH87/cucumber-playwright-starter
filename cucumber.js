@@ -16,7 +16,11 @@ if (!fs.existsSync(resultsDir)) {
 
 // Node parameters set via command line or CI
 const common = {
-  format: [`json:./e2e/results/cucumber_report.json`, '@cucumber/pretty-formatter', 'html:./e2e/results/report.html'],
+  format: [
+    `json:./e2e/results/cucumber-report.json`,
+    '@cucumber/pretty-formatter',
+    'html:./e2e/results/cucumber-report.html',
+  ],
   requireModule: ['ts-node/register'],
   require: [path.join(__dirname, 'e2e/**/*.ts')],
   paths: [path.join(__dirname, 'e2e/features/')],

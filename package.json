@@ -37,6 +37,7 @@
     "@cucumber/pretty-formatter": "^1.0.0",
     "@playwright/test": "^1.31.2",
     "@types/jasmine": "~4.3.0",
+    "cucumber-html-reporter": "^6.0.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "jasmine-core": "~4.5.0",

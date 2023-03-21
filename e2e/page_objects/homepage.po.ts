@@ -1,15 +1,15 @@
-import { Locator, Page } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { TestWorld } from 'e2e/world';
 
 export class HomePage {
-  constructor(private world: TestWorld, private page: Page) {}
+  constructor(private world: TestWorld) {}
 
   async navigateTo(): Promise<void> {
-    await this.page.goto(`${this.world.parameters.appUrl}`);
-    // await this.element(By.text, 'Reference ID').waitForVisible();
+    await this.world.page.goto(`${this.world.parameters.appUrl}`);
+    await expect(this.world.page).toHaveURL(this.world.parameters.appUrl);
   }
 
   async hasRunningText(): Promise<boolean> {
-    return this.page.isVisible('//span[text()="cucumber-playwright-starter app is running!"]');
+    return this.world.page.isVisible('//span[text()="cucumber-playwright-starter app is running!"]');
   }
 }
