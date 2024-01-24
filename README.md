@@ -18,9 +18,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Running E2E tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Before running tests, ensure that @Playwright/test is installed correctly by running `npm run e2e:install`.
+
+### locally
+
+To run locally, first ensure your application is running using `npm start`.
+
+Once the application is running run the script `npm run e2e:test-local`, to execute your e2e tests locally using Chrome. You can find the local config in `cucumber.js`. The default is to run `headless:false`, which display the browser.
+
+### CI/CD
+
+To run in a CI pipeline then use the script `npm run e2e:ci`, this is configured to automatically run the application, once running the e2e tests will then execute in headless mode and use the parallel feature to reduce test duration. You can find the ci config in `cucumber.js`.
 
 ## Further help
 
