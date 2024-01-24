@@ -8,12 +8,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "e2e:serve": "ng serve --configuration=e2e",
-    "e2e:ci": "start-server-and-test e2e:serve http://localhost:4200 e2e:ci-and-report",
-    "e2e:ci-and-report": "npm-run-all --serial --continue-on-error e2e:test-ci e2e:report-publish",
+    "e2e:ci": "start-server-and-test e2e:serve http://localhost:4200 e2e:test-ci",
+    "e2e:ci-and-report": "npm-run-all --serial --continue-on-error e2e:ci e2e:report-publish",
     "e2e:test-ci": "npx cucumber-js -p ci",
     "e2e:test-local": "npx cucumber-js",
     "e2e:test-local-tags": "npx cucumber-js --tags @scenario",
-    "e2e:report-publish": "node e2e/reporting/index.js"
+    "e2e:report-publish": "node e2e/reporting/index.js",
+    "e2e:install": "npx playwright install"
   },
   "private": true,
   "dependencies": {

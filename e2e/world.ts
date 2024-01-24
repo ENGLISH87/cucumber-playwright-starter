@@ -34,6 +34,7 @@ export class TestWorld extends World {
    */
   async init() {
     const { timeout, use } = this.playwrightConf;
+
     this.browser = await chromium.launch({ headless: use?.headless, timeout });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
@@ -49,9 +50,9 @@ export class TestWorld extends World {
    * This is usually called from a cucumber After hook
    */
   async destroy() {
-    await this.page.close();
-    await this.context.close();
-    await this.browser.close();
+    await this.page?.close();
+    await this.context?.close();
+    await this.browser?.close();
   }
 }
 

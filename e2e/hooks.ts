@@ -1,13 +1,5 @@
-import { After, AfterStep, Before, BeforeAll, ITestCaseHookParameter } from '@cucumber/cucumber';
+import { After, AfterStep, Before, ITestCaseHookParameter } from '@cucumber/cucumber';
 import { TestWorld } from './world';
-import { rmdirSync } from 'fs';
-
-/**
- * before all tests - delete existing results folder
- */
-BeforeAll(() => {
-  rmdirSync('e2e/results', { recursive: true });
-});
 
 /**
  * before each scenario - setup browser and context and new page
