@@ -1,6 +1,6 @@
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
@@ -165,6 +165,19 @@ a:hover {
   color: #125699;
 }
 
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer a {
+  display: flex;
+  align-items: center;
+}
+
 .terminal {
   position: relative;
   width: 80%;
@@ -216,18 +229,6 @@ a:hover {
 .circle-link:hover {
   transform: translateY(-0.25rem);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  line-height: 20px;
-}
-
-footer a {
-  display: flex;
-  align-items: center;
 }
 
 .github-star-badge {
